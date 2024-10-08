@@ -33,12 +33,17 @@ Exploit:
 
 ## Các ví dụ
 
-Level 1: Câu truy vấn đơn giản
+#### Level 1
 
-`$sql = "SELECT username FROM users WHERE username='$username' AND password='$password'";
-    $query = $database->query($sql);
+```
+$sql = "SELECT username FROM users WHERE username='$username' AND password='$password'";
+$query = $database->query($sql);
+
+...
+
+$login_user = $row["username"];
+if ($login_user === "admin")
   ...
-  $login_user = $row["username"];
-		if ($login_user === "admin")
-  ...
-  `
+```
+
+Khai thác đơn giản chỉ cần truyền username 
