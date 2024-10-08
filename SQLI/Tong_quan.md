@@ -9,7 +9,7 @@
     - Gửi truy vấn: UNION SELECT NULL, NULL--.
 - Kiểu dữ liệu của các cột được trả về từ truy vấn ban đầu tương ứng để chứa kết quả từ truy vấn được chèn.
 
-### Tìm version:
+#### Tìm version:
 
 | Database type | Query |
 | --- | --- |
@@ -17,11 +17,11 @@
 | Oracle | `SELECT * FROM v$version` |
 | PostgreSQL | `SELECT version()` |
 
-### Tìm tên bảng: table_name:
+#### Tìm tên bảng: table_name:
 
 `SELECT * FROM information_schema.tables`
 
-### Tìm tên cột: column_name:
+#### Tìm tên cột: column_name:
 
 `SELECT * FROM information_schema.columns WHERE table_name = 'Users'`
 
