@@ -30,3 +30,15 @@
 Exploit:
 
 - triggering conditional responses (kích hoạt phản ứng có điều kiện)
+
+## Các ví dụ
+
+Level 1: Câu truy vấn đơn giản
+
+`$sql = "SELECT username FROM users WHERE username='$username' AND password='$password'";
+    $query = $database->query($sql);
+  ...
+  $login_user = $row["username"];
+		if ($login_user === "admin")
+  ...
+  `
