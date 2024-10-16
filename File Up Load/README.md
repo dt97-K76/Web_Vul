@@ -61,7 +61,7 @@ Kiểm tra quyền upload file `.htaccess`. Nếu được hãy upload một t�
 
     AddType application/x-httpdphp .txt 
 
-Điều này cho phép chyaj file .txt như code php.
+Điều này cho phép chạy file .txt như code php.
 
 ### Example 5
 
