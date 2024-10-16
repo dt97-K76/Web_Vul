@@ -2,8 +2,8 @@
 
 Đây là lỗ hỏng bảo mật web cho phép kẻ tấn công can thiệp vào các truy vấn đối với cơ sở dữ liệu của nó. Điều này cho phép kẻ tấn công truy xuất, thay đổi, tác động đến dữ liệu ẩn.
 
-## SQLi UNION attack: kết hợp truy vấn
-
+## SQLi UNION attack
+- Kết hợp truy vấn.
 - Xác định số cột trả về từ truy vấn ban đầu.
     - Sắp xếp kết quả theo các cột: ORDER BY 1--.
     - Gửi truy vấn: UNION SELECT NULL, NULL--.
@@ -25,25 +25,10 @@
     
     `SELECT * FROM information_schema.columns WHERE table_name = 'Users'`
 
-## Blind SQLi: lỗi SQLi nhưng phản hồi không chứa kết quả truy vấn liên quan hoặc chi tiết.
+## Blind SQLi
+- Lỗi SQLi nhưng phản hồi không chứa kết quả truy vấn liên quan hoặc chi tiết.
 
 Exploit:
 
 - triggering conditional responses (kích hoạt phản ứng có điều kiện)
 
-## Các ví dụ
-
-#### Level 1
-
-```
-$sql = "SELECT username FROM users WHERE username='$username' AND password='$password'";
-$query = $database->query($sql);
-
-...
-
-$login_user = $row["username"];
-if ($login_user === "admin")
-  ...
-```
-
-Khai thác đơn giản chỉ cần truyền username 
