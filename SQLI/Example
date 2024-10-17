@@ -1,1 +1,12 @@
+## Example
 
+#### Example 1
+
+```
+$sql = "SELECT username FROM users WHERE username='$username' AND password='$password'";
+$query = $database->query($sql);
+...
+
+Câu truy vấn select username nơi mà username = $username và password = $pasword. Nếu username = "admin" sẽ đăng nhập thành công. Có thể thấy biến $username được bọc trong dấu '' được hiểu như chuỗi kí tự. Vậy để khai thác:
+
+C1: Truyền dữ liệu `admin' --` vào biến username.
