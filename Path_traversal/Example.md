@@ -49,6 +49,12 @@ Một số trường ta có thể thay đổi trong gói tin HTTP gửi lên ser
 
 ### Example 6
 
+Lỗi Zip Slip, sử dụng công cụ cho phép thay đổi tên file sao cho có chứa ../. Một trong các công cụ nổi tiếng là evilarc:
+
+python3 evilarc.py -d 2 -o unix info.php
+
+
+
 
 
 
