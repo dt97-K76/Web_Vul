@@ -97,7 +97,9 @@ Khai thác: `'; ls #`.
 
 Trường hợp: `echo 'Hello $username' | cowsay -n ; figlet "Hello $username"`
 
-Khai thác dựa trên dấu "", chương trình không filter dấu backtick --> ``ls``.
+Khai thác dựa trên dấu "", chương trình không filter dấu backtick --> ``.
+
+
 
 
 
