@@ -16,8 +16,8 @@
 ```
 
 - `<!DOCTYPE foo [ ... ]>`: Xác định Document Type Definition (DTD) cho tài liệu XML. Trong đó:
-  - <!ELEMENT foo ANY>: Khai báo phần tử foo có thể chứa bất kỳ nội dung nào.
-  - <!ENTITY bar SYSTEM "file:///c:/boot.ini">: Tạo một thực thể (entity) tên là bar, liên kết với file trên hệ thống cục bộ (file:///c:/boot.ini).
+  - `<!ELEMENT foo ANY>`: Khai báo phần tử foo có thể chứa bất kỳ nội dung nào.
+  - `<!ENTITY bar SYSTEM "file:///c:/boot.ini">`: Tạo một thực thể (entity) tên là bar, liên kết với file trên hệ thống cục bộ (file:///c:/boot.ini).
 
 ## Example
 
