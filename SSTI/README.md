@@ -18,6 +18,35 @@
 | Smarty | { } |
 | Twig | {{ }} |
 
+### Python
+
+| Template Name | Payload Format |
+| Bottle | {{ }} |
+| Chameleon | ${ } |
+| Cheetah | ${ } |
+| Django | {{ }} |
+| Jinja2 | {{ }} |
+| Mako | ${ } |
+| Pystache | {{ }} |
+| Tornado | {{ }} |
+
+### JavaScript
+
+| Template Name | 	Payload Format
+| DotJS 	| {{= }} 
+| DustJS 	| {}
+| EJS 	| <% %>
+| HandlebarsJS 	| {{ }}
+| HoganJS 	 | {{ }}
+| Lodash 	 | {{= }}
+| MustacheJS 	| {{ }}
+| NunjucksJS 	| {{ }}
+| PugJS 	| #{}
+| TwigJS 	| {{ }}
+| UnderscoreJS 	| <% %>
+| VelocityJS 	| #=set($X="")$X
+| VueJS 	| {{ }}
+
 
 
 
