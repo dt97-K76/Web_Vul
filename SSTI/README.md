@@ -21,6 +21,7 @@
 ### Python
 
 | Template Name | Payload Format |
+| :--- | :--- | 
 | Bottle | {{ }} |
 | Chameleon | ${ } |
 | Cheetah | ${ } |
@@ -33,6 +34,7 @@
 ### JavaScript
 
 | Template Name | 	Payload Format
+| :--- | :--- | 
 | DotJS 	| {{= }} 
 | DustJS 	| {}
 | EJS 	| <% %>
