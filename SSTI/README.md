@@ -10,11 +10,17 @@
 ### PHP
 
 Template Name 	|| Payload Format
+
 Laravel Blade 	|| {{ }}
+
 Latte 	        || {var $X=""}{$X}
+
 Mustache 	    || {{ }}
+
 Plates 	        || <?= ?>
+
 Smarty 	        || { }
+
 Twig 	        || {{ }}
 
 
