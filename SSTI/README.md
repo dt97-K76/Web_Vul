@@ -62,6 +62,19 @@ Spring 	| *{7*7}
 Thymeleaf 	| [[ ]]
 Velocity 	| #set($X="") $X
 
+### Ruby
+
+Template Name 	| Payload Format
+| :--- | :--- | 
+Erb 	| <%= %>
+Erubi 	| <%= %>
+Erubis 	| <%= %>
+HAML 	| #{ }
+Liquid 	| {{ }}
+Mustache 	| {{ }}
+Slim 	| #{ }
+
+
 
 
 
