@@ -49,6 +49,18 @@
 | VelocityJS 	| #=set($X="")$X
 | VueJS 	| {{ }}
 
+# Java
+
+Template Name |	Payload Format
+| :--- | :--- | 
+Codepen |	#{}
+Freemarker 	| ${3*3}, #{3*3}, [=3*3]
+Groovy 	| ${9*9}
+Jinjava 	| {{ }}
+Pebble 	| {{ }}
+Spring 	| *{7*7}
+Thymeleaf 	| [[ ]]
+Velocity 	| #set($X="") $X
 
 
 
