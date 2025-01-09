@@ -76,7 +76,7 @@ Slim 	| #{ }
 
 
 
-payload test:
+payload test: `${{<%[%'"}}%\`
 
 - {{ }}
 - {var $X=""}{$X}
