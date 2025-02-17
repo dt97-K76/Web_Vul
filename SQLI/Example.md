@@ -120,7 +120,7 @@ Cách khai thác: lợi dụng câu truy vấn UPDATE thay đổi password của
 `$sql = "SELECT * FROM posts WHERE id=" . $_GET['id'];`
 
 - xac dinh so cot
-- 
+  
 `select from posts where id=1+union+select+1,2,3,4+--+-`
 
 - mysql cho phep doc, ghi file --> database user duoc quyen doc ghi file 
